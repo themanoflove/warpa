@@ -17,6 +17,7 @@ public class randomfärg : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+        //när du trycker på space så får skeppet en random färg
         if (Input.GetKey(KeyCode.Space))
         {
             ship = new Color(Random.Range(0f,2f),Random.Range(0f,2f),Random.Range(0f,2f));

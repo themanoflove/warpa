@@ -1,16 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+   //den här gör så att tiden visas i consolen varje sekund
 public class timer : MonoBehaviour {
     public float TimeHasPassed;
 
-	// Use this for initialization
+	
 	void Start () {
         InvokeRepeating("Timer", 1f, 1f);
 	}
 	
-	// Update is called once per frame
+	
 	void Update () {
         
 	}

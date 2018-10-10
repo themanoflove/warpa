@@ -7,7 +7,7 @@ public class Skeppets : MonoBehaviour
     public float rotationspeed = 360;
     public Color color;
     public SpriteRenderer rend;
-    public float movespeed = 360;
+    public float movespeed;
     public Color ship;
     public SpriteRenderer shipcolor;
 
@@ -19,14 +19,19 @@ public class Skeppets : MonoBehaviour
 
     // Use this for initialization
     void Start()
-    {
-        //Transform.Postion.x.y(Random.value, Random.value, 0);
+    {   //Det gör att du början spelet på ett ranom ställe  
+        transform.position=new Vector3(Random.Range(26f,-26.5f), Random.Range(15.8f,-15.8f));
+        //Den här gör så att din movespeed blir randomserad
+        movespeed = Random.Range(0.09f, 0.4f);
 
     }
 
     // Update is called once per frame
     void Update()
-    {    //om D trycks ner åker du höger och byter färg till blå
+        
+    {
+        
+        //om D trycks ner åker du höger och byter färg till blå
         if (Input.GetKey(KeyCode.D))
         {
             transform.Rotate(0, 0, -rotationspeed * Time.deltaTime);
